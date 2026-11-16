@@ -1,0 +1,41 @@
+// Eye GIF logo (Ghostty 1.4 kitty graphics). GIF bg is pure #000000 -> Ghostty background = #000000 so the logo has no visible box.
+// Monochrome grays sampled to match the eye; hex colors don't depend on the Ghostty theme.
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/eye.gif",
+    "width": 36,
+    "height": 18,
+    "animationFrame": 0,
+    "padding": { "top": 1, "left": 2, "right": 3 }
+  },
+  "display": {
+    "separator": "  ",
+    "color": { "keys": "#6e6e6e", "title": "#e8e8e8", "output": "#b4b4b4", "separator": "#3a3a3a" },
+    "key": { "width": 9 },
+    "bar": { "char": { "elapsed": "━", "total": "━" }, "border": { "left": "", "right": "" }, "color": { "elapsed": "#d0d0d0", "total": "#2a2a2a" }, "width": 12 },
+    "percent": { "type": ["num", "bar"], "color": { "green": "#b4b4b4", "yellow": "#d0d0d0", "red": "#ffffff" } }
+  },
+  "modules": [
+    "break",
+    { "type": "title", "format": "{user-name}{#38;2;80;80;80}@{#}{host-name}" },
+    { "type": "custom", "format": "{#38;2;45;45;45}────────────────────────────" },
+    { "type": "os", "key": "os", "format": "macOS {version} {codename}" },
+    { "type": "host", "key": "host", "format": "{name}" },
+    { "type": "kernel", "key": "kernel" },
+    { "type": "uptime", "key": "uptime" },
+    { "type": "packages", "key": "pkgs" },
+    { "type": "shell", "key": "shell", "format": "{pretty-name} {version}" },
+    { "type": "terminal", "key": "term", "format": "{pretty-name} {version}" },
+    { "type": "display", "key": "display", "format": "{width}x{height} @ {refresh-rate} Hz" },
+    { "type": "custom", "format": "{#38;2;45;45;45}────────────────────────────" },
+    { "type": "cpu", "key": "cpu", "format": "{name} ({cores-physical})" },
+    { "type": "gpu", "key": "gpu", "format": "{name} · {core-count} cores" },
+    { "type": "memory", "key": "memory" },
+    { "type": "disk", "key": "disk", "folders": "/System/Volumes/Data", "format": "{size-used} / {size-total} {size-percentage}" },
+    { "type": "battery", "key": "battery" },
+    "break",
+    { "type": "colors", "symbol": "circle" }
+  ]
+}
