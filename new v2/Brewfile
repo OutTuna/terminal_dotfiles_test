@@ -4,6 +4,8 @@ tap "kamillobinski/thock", trusted: { casks: ["thock"] }
 tap "lajosdeme/watchtower", trusted: true
 # Automatic configure script builder
 brew "autoconf"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Cross-platform make
@@ -50,6 +52,8 @@ brew "libpcap"
 brew "librtlsdr"
 # Rainbows and unicorns in your console!
 brew "lolcat"
+# Mac App Store command-line interface
+brew "mas"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
 # Deep clean and optimize your Mac
@@ -58,6 +62,8 @@ brew "mole"
 brew "neovim"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# Minimal dumb-terminal emulation program
+brew "picocom"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
 # Search tool like grep and The Silver Searcher
@@ -83,8 +89,14 @@ cask "android-platform-tools"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 cask "font-jetbrains-mono-nerd-font"
+# 2D and 3D game engine
+cask "godot"
+# Tool for editing metadata of audio files including MP3, FLAC, OGG, and more
+cask "mp3tag"
 # Mesh VPN client
 cask "zerotier-one"
+mas "Xcode", id: 497799835
+go "golang.org/x/tools/gopls"
 go "github.com/OutTuna/techwatch"
 uv "headroom-ai[all]"
 npm "omniroute"

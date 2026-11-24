@@ -30,6 +30,9 @@
     { "type": "terminal", "key": "term", "format": "{pretty-name} {version}" },
     { "type": "display", "key": "display", "format": "{width}x{height} @ {refresh-rate} Hz" },
     { "type": "custom", "format": "{#38;2;45;45;45}────────────────────────────" },
+    // days since 2025-09-25 (local midnights; +43200 absorbs DST hour)
+    { "type": "command", "key": "since", "text": "s=$(date -j -f '%Y-%m-%d %H:%M:%S' '2025-09-25 00:00:00' +%s); t=$(date -j -f '%Y-%m-%d %H:%M:%S' \"$(date +%Y-%m-%d) 00:00:00\" +%s); d=$(( (t - s + 43200) / 86400 )); [ $d -eq 1 ] && echo \"1 day\" || echo \"$d days\"" },
+    { "type": "custom", "format": "{#38;2;45;45;45}────────────────────────────" },
     { "type": "cpu", "key": "cpu", "format": "{name} ({cores-physical})" },
     { "type": "gpu", "key": "gpu", "format": "{name} · {core-count} cores" },
     { "type": "memory", "key": "memory" },
